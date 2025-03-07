@@ -9,4 +9,6 @@ public interface IStudentService {
     boolean add(Student student);
     Student findById(int id);
     boolean update(int id,Student student);
+    boolean delete(int id);
+    List<Student> searchById(String keyword);
 }

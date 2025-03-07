@@ -93,4 +93,64 @@ public class StudentRepository implements IStudentRepository{
         }
         return false;
     }
+
+    @Override
+    public boolean delete(int id) {
+        String query = "delete from student where id = ?";
+        try (Connection connection = ConnectDatabase.getConnectDB();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1,id);
+
+            int row = preparedStatement.executeUpdate();
+            return row == 1 ;
+        } catch (Exception e) {
+            System.out.println("lỗi");
+        }
+        return false;
+    }
+
+    @Override
+    public List<Student> searchById(String keyword) {
+        List<Student> studentList = new ArrayList<>();
+        String query;
+        Connection connection = ConnectDatabase.getConnectDB();
+        if(keyword.matches("\\d+")){
+            query = "select * from student where id= ?";
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setInt(1, Integer.parseInt(keyword));
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while (resultSet.next()){
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    int age = resultSet.getInt("age");
+                    float point = resultSet.getFloat("point");
+                    int classId = resultSet.getInt("id_class");
+                    Student student = new Student(id,name,age,point,classId);
+                    studentList.add(student);
+                }
+            } catch (SQLException e) {
+                System.out.println("lỗi");
+            }
+        }else {
+            query = "select * from student where name LIKE";
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, "%"+keyword+"%");
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while (resultSet.next()){
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    int age = resultSet.getInt("age");
+                    float point = resultSet.getFloat("point");
+                    int classId = resultSet.getInt("id_class");
+                    Student student = new Student(id,name,age,point,classId);
+                    studentList.add(student);
+                }
+            } catch (SQLException e) {
+                System.out.println("lỗi");
+            }
+        }
+        return studentList;
+    }
 }

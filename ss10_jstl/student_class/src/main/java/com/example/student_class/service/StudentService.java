@@ -34,4 +34,17 @@ public class StudentService implements IStudentService {
         }
         return false;
     }
+
+    @Override
+    public boolean delete(int id) {
+        if (studentRepository.delete(id)) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public List<Student> searchById(String keyword) {
+        return studentRepository.searchById(keyword);
+    }
 }

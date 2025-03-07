@@ -12,6 +12,10 @@
     <title>Title</title>
 </head>
 <body>
+<form action="/students?action=search"method="post">
+    <input type="text" name="text-search" placeholder="Id or Name">
+    <input type="submit" value="Search">
+</form>
 <a href="/students?action=create">Create Student</a>
 <table>
     <tr>
@@ -31,6 +35,7 @@
             <td>${student.getClassId()}</td>
             <td>
                 <a href="/students?action=update&id=${student.id}">update</a>
+                <a href="/students?action=delete&id=${student.id}" onclick="return confirm('Delete student ?')">Delete</a>
             </td>
         </tr>
 

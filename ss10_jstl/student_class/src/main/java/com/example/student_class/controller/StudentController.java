@@ -32,6 +32,11 @@ public class StudentController extends HttpServlet {
                 req.setAttribute("student", student);
                 req.getRequestDispatcher("/view/student/update.jsp").forward(req,resp);
                 break;
+            case "delete":
+                int id1 = Integer.parseInt(req.getParameter("id"));
+                studentService.delete(id1);
+                resp.sendRedirect("/students");
+                break;
             default:
                 listStudent(req,resp);
                 break;
@@ -57,6 +62,12 @@ public class StudentController extends HttpServlet {
                 Student student = new Student(id, name, age, point, classId);
                 studentService.update(id, student);
                 resp.sendRedirect("/students");
+                break;
+            case "search":
+                String idSearch = req.getParameter("text-search");
+                List<Student> studentList = studentService.searchById(idSearch);
+                req.setAttribute("studentList", studentList);
+                req.getRequestDispatcher("/view/student/list.jsp").forward(req, resp);
                 break;
             default:
                 listStudent(req,resp);

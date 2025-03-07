@@ -108,7 +108,7 @@
 <div class="full-screen">
     <div class="form-login">
         <h1>Login</h1>
-        <form action="/products" method="post">
+        <form action="/login" method="post">
             <label>Username:</label>
             <div class="input-group">
                 <span>👤</span>

@@ -12,6 +12,10 @@
     <title>Products</title>
 </head>
 <body>
+<c:if test="${sessionScope.username eq 'admin'}">
+    <p>Xin chào, <strong>${sessionScope.username}</strong>!</p>
+    <a href="/logout">Đăng xuất</a>
+</c:if>
 <h1>Products</h1>
 <form action="/products?action=search"method="post">
     <input type="text" name="text-search" placeholder="Id or Name">

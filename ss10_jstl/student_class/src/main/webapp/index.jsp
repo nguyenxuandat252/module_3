@@ -8,6 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<c:import url="/view/product/login.jsp"></c:import>
+<a href="hello-servlet">Hello Servlet</a>
 </body>
 </html>

@@ -1,0 +1,117 @@
+/* Cơ bản về thiết lập cho toàn bộ trang */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6b8e23, #3e8e41); /* Gradient màu nền */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Thiết lập cho container của form */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng khi form được hover */
+}
+
+form:hover {
+    transform: translateY(-5px); /* Thêm hiệu ứng nâng khi hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Tiêu đề form */
+form h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Định dạng các label */
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+/* Định dạng các input */
+input[type="text"], input[type="password"], input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 24px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
+    border: 2px solid #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+    outline: none;
+}
+
+/* Định dạng các liên kết */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Định dạng cho nút submit */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Thông báo lỗi */
+p {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Cải thiện tính linh hoạt trên di động */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* Cho phép form rộng hơn trên các màn hình nhỏ */
+    }
+    input[type="submit"] {
+        font-size: 16px; /* Giảm kích thước nút trên màn hình nhỏ */
+    }
+    label, input {
+        font-size: 14px; /* Giảm kích thước chữ cho các label và input */
+    }
+}

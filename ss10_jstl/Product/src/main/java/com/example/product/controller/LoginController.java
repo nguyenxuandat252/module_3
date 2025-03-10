@@ -25,9 +25,7 @@ public class LoginController extends HttpServlet {
             HttpSession session = req.getSession();
             session.setAttribute("username", username);
             session.setAttribute("role", role);
-            mess="Đăng nhập thanh công!";
-            req.setAttribute("mess",mess);
-            req.getRequestDispatcher("/products").forward(req, resp);
+            resp.sendRedirect("/products");
         }else {
             mess="Đăng nhập thất bại kiểm tra lại thông tin đăng nhập!";
             req.setAttribute("mess",mess);
@@ -35,4 +33,5 @@ public class LoginController extends HttpServlet {
         }
 
     }
+
 }

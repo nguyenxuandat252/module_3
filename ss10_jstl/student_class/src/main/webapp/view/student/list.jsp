@@ -32,7 +32,7 @@
             <td>${student.getName()}</td>
             <td>${student.getAge()}</td>
             <td>${student.getPoint()}</td>
-            <td>${student.getClassId()}</td>
+            <td>${student.getNameClass()}</td>
             <td>
                 <a href="/students?action=update&id=${student.id}">update</a>
                 <a href="/students?action=delete&id=${student.id}" onclick="return confirm('Delete student ?')">Delete</a>

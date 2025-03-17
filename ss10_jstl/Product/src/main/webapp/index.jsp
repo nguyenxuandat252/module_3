@@ -10,6 +10,6 @@
 </h1>
 <br/>
 <%--<c:import url="/view/product/login.jsp"></c:import>--%>
-<c:import url="/view/product/login.jsp"></c:import>
+<c:import url="/login"></c:import>
 </body>
 </html>

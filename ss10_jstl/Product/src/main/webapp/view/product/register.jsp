@@ -24,7 +24,7 @@
     <label>phone</label>
     <input type="tel" name="phone" required><br>
     <input type="submit" value="Register">
-    <a href="view/product/register.jsp">Login</a>
+    <a href="/view/product/login.jsp">Login</a>
     <p>${mess}</p>
 </form>
 </body>

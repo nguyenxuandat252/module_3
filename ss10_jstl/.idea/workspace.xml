@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66d81281-8bbd-4a34-9bd2-a4393824c8af" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Product/src/main/java/com/example/product/controller/Cartcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/src/main/java/com/example/product/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/main/java/com/example/product/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/src/main/java/com/example/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/main/java/com/example/product/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/src/main/java/com/example/product/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/main/java/com/example/product/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/src/main/webapp/view/product/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/main/webapp/view/product/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/src/main/webapp/view/product/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/main/webapp/view/product/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/src/main/webapp/view/product/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Product/src/main/webapp/view/product/register.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2u9lIx9apH9HXsoYbk7ipAPrhRe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "datnx",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/codegym/module3/code/project-product-clone/project-product",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66d81281-8bbd-4a34-9bd2-a4393824c8af" name="Changes" comment="" />
+      <created>1741668594194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741668594194</updated>
+      <workItem from="1741668595266" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -25,6 +25,7 @@
 </head>
 <body>
 
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <!-- Logo -->
@@ -57,7 +58,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Giỏ hàng</a>
+                    <a class="nav-link" href="#">Giỏ hàng(${sessionScope.cart})</a>
                 </li>
 
                 <li class="nav-item">
@@ -68,7 +69,7 @@
             <!-- Tên đăng nhập và Đăng xuất -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Xin chào, <strong>${sessionScope.username}</strong></a>
+                    <a class="nav-link" href="#">${sessionScope.greeting} <strong>${sessionScope.username}</strong></a>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-outline-light btn-sm" href="/logout">${sessionScope.status}</a>
@@ -78,7 +79,7 @@
     </div>
 </nav>
 <h2>Danh sách sản phẩm</h2>
-
+<form action="/products" method="post">
 <div class="product-container">
 
     <c:forEach var="product" items="${productList}">
@@ -90,11 +91,12 @@
             <p>Giá: ${product.getPrice()} VND</p>
             <p>
                 <button class="btn btn-success">Thêm giỏ hàng</button>
-                <button class="btn btn-primary">Đặt hàng</button>
+<%--                <button class="btn btn-primary">Đặt hàng</button>--%>
             </p>
         </div>
     </c:forEach>
 </div>
+</form>
 <!-- Hiển thị phân trang -->
 <div class="pagination">
     <c:if test="${currentPage > 1}">

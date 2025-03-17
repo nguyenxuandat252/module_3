@@ -80,12 +80,12 @@ public class StudentRepository implements IStudentRepository {
         String query = "UPDATE student SET name = ?, age = ?, point = ?, id_class = ? WHERE id = ?";
         try (Connection connection = ConnectDatabase.getConnectDB();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
+            preparedStatement.setInt(1, student.getId());
             preparedStatement.setString(1, student.getName());
             preparedStatement.setInt(2, student.getAge());
             preparedStatement.setFloat(3, student.getPoint());
             preparedStatement.setInt(4, student.getClassId());
-            preparedStatement.setInt(5, student.getId());
+
 
             int row = preparedStatement.executeUpdate();
             return row == 1;

@@ -38,4 +38,9 @@ public class RegisterController extends HttpServlet {
             req.getRequestDispatcher("/view/product/login.jsp").forward(req, resp);
         }
     }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.sendRedirect("/view/product/register.jsp");
+    }
 }

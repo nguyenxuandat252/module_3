@@ -15,16 +15,22 @@ import java.util.List;
 
 @WebServlet(name = "ProductController", value = "/products")
 public class ProductController extends HttpServlet {
-    private IProductService productService =new ProductService();
+    private IProductService productService = new ProductService();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = "Đăng nhập";
         String logout = "Đăng xuất";
+        String greeting = "";
         HttpSession session = req.getSession();
-        if(session.getAttribute("username")==null){
-            session.setAttribute("status",login);
-        }else {
-            session.setAttribute("status",logout);
+        if (session.getAttribute("username") == null) {
+            session.setAttribute("status", login);
+            session.setAttribute("greeting", greeting);
+
+        } else {
+            greeting = "Xin chào," ;
+            session.setAttribute("status", logout);
+            session.setAttribute("greeting", greeting);
         }
 
 
@@ -62,13 +68,23 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        if(session.getAttribute("username")!=null){
+            int cart = 0;  // Giỏ hàng mặc định bắt đầu từ 0
+            Object cartAttribute = session.getAttribute("cart");
+            if (cartAttribute != null) {
+                cart = (int) cartAttribute;
+            }
+            cart++;
+            session.setAttribute("cart", cart);
+        }
         String action = req.getParameter("action");
-        if(action==null){
+        if (action == null) {
             action = "";
         }
-        switch (action){
+        switch (action) {
             default:
-                listProduct(req,resp);
+                listProduct(req, resp);
         }
     }
 }

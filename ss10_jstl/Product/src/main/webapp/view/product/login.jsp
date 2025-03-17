@@ -18,7 +18,7 @@
     <input type="text" name="username"><br>
     <label>username</label>
     <input type="password" name="password"><br>
-    <a href="view/product/register.jsp">register now</a>
+    <a href="/register">register now</a>
     <input type="submit" value="Login">
 </form>
 </body>
